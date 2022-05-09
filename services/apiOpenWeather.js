@@ -12,7 +12,7 @@ const getForecast = async (lat, lon) => {
 };
 
 const getCurrent = async (lat, lon) => {
-  const response = await fetch(`${baseUrl}onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+  const response = await fetch(`${baseUrl}weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
   const data = response.json();
   return data;
 };
