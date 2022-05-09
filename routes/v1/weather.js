@@ -12,7 +12,7 @@ module.exports = (fastify, options, done) => {
     reply.code(201).send({ status: 'V1 running OK' });
   });
 
-  fastify.get('/current', currentOpts);
+  fastify.get('/current/:city?', currentOpts);
 
 
   done();
