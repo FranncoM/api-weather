@@ -1,0 +1,48 @@
+{
+  "name": "api-wheater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "local:dev": "fastify start -w -l info -P app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranncoM/api-wheater.git"
+  },
+  "author": "Franco Miño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranncoM/api-wheater/issues"
+  },
+  "homepage": "https://github.com/FranncoM/api-wheater#readme",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^7.0.0",
+    "jest": "^27.2.3",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^4.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "fastify": "^3.29.0",
+    "fastify-cli": "^2.15.0",
+    "fastify-plugin": "^3.0.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

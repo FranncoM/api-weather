@@ -1,0 +1,33 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "require-jsdoc": 0,
+    "indent": ["error", 2],
+    "max-len": [
+      "off",
+      {
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "object-curly-spacing": ["error", "always"],
+    "linebreak-style": 0,
+    "comma-dangle": "off",
+    "no-unreachable": "off",
+    "operator-linebreak": "off",
+    "no-invalid-this": "off",
+    "quote-props": "off"
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es2020": true
+  },
+  "globals": {
+    "expect": true,
+    "assert": true
+  }
+}
