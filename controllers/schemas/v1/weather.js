@@ -19,7 +19,7 @@ const dailySchema = {
   uvi: { type: 'number' }
 };
 
-const currentSchema = {
+const forecastSchema = {
   response: {
     200: {
       type: 'object',
@@ -33,4 +33,49 @@ const currentSchema = {
   }
 };
 
-module.exports = { currentSchema };
+const currentSchema = {
+  response: {
+    200: {
+      type: 'object',
+      properties: {
+        city: { type: 'string' },
+        timezone: { type: 'string' },
+        coord: {
+          lon: { type: 'object' },
+          lat: { type: 'object' }
+        },
+        weather: { type: 'array' },
+        base: { type: 'string' },
+        main: {
+          temp: { type: 'number' },
+          feels_like: { type: 'number' },
+          temp_min: { type: 'number' },
+          temp_max: { type: 'number' },
+          pressure: { type: 'number' },
+          humidity: { type: 'number' }
+        },
+        visibility: { type: 'number' },
+        wind: {
+          speed: { type: 'number' },
+          deg: { type: 'number' }
+        },
+        clouds: {
+          zll: { type: 'string' }
+        },
+        dt: { type: 'number' },
+        sys: {
+          id: { type: 'number' },
+          message: { type: 'number' },
+          country: { type: 'string' },
+          sunrise: { type: 'number' },
+          sunset: { type: 'number' }
+        },
+        id: { type: 'number' },
+        name: { type: 'string' },
+        cod: { type: 'number' }
+      }
+    }
+  }
+};
+
+module.exports = { forecastSchema, currentSchema };
