@@ -8,7 +8,7 @@
     "local:dev": "fastify start -w -l info -P app.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js,.jsx .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tap --cov test/**/*.test.js",
     "prepare": "husky install"
   },
   "repository": {
@@ -22,12 +22,13 @@
   },
   "homepage": "https://github.com/FranncoM/api-wheater#readme",
   "devDependencies": {
-    "eslint": "^7.20.0",
+    "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
-    "jest": "^27.2.3",
-    "nodemon": "^2.0.16",
-    "supertest": "^6.1.6"
+    "tap": "^16.2.0",
+    "prettier": "^2.6.2"
   },
   "dependencies": {
     "@fastify/autoload": "^4.0.1",
@@ -39,13 +40,5 @@
     "fastify-plugin": "^3.0.1",
     "node-fetch": "^2.6.7",
     "node-iplocate": "^1.0.3"
-  },
-  "eslintConfig": {
-    "env": {
-      "jest": true
-    }
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }
