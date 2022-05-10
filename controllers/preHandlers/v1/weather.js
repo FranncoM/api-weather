@@ -1,4 +1,5 @@
-const currentPreHandler = async (request, reply) => {
+const forecastPreHandler = async (request, reply) => {
   // if (!request.body) throw new Error('kaboom');
 };
-module.exports = { currentPreHandler };
+const currentPreHandler = async (request, reply) => {};
+module.exports = { currentPreHandler, forecastPreHandler };
