@@ -34,3 +34,6 @@ API REST de clima que se sirve de la api de OpenWeather.
 ### Pruebas automatizadas
 
 Las pruebas automatizadas se realizaron con ***Tap***.
+
+### Api desplegada en vercel
+[**Vercel Api Weather**](https://api-weather-tan.vercel.app/)
