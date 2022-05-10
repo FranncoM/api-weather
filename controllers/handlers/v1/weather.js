@@ -1,5 +1,9 @@
 const { getLocate } = require('../../../services/ipLocate');
-const { getCurrent, getForecast, getDirectGeoCoding } = require('../../../services/apiOpenWeather');
+const {
+  getCurrent,
+  getForecast,
+  getDirectGeoCoding,
+} = require('../../../services/apiOpenWeather');
 
 const currentHandler = async (request, reply) => {
   let response = {};
@@ -12,7 +16,6 @@ const currentHandler = async (request, reply) => {
     response = await getCurrent(latitude, longitude);
     response.city = city;
   }
-
   return reply.code(200).send(response);
 };
 

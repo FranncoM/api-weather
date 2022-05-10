@@ -9,10 +9,10 @@ const locationSchema = {
         longitude: { type: 'number' },
         time_zone: { type: 'string' },
         postal_code: { type: 'string' },
-        subdivision: { type: 'string' }
-      }
-    }
-  }
+        subdivision: { type: 'string' },
+      },
+    },
+  },
 };
 
 module.exports = { locationSchema };

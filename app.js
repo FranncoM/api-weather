@@ -3,7 +3,7 @@
 const path = require('path');
 const AutoLoad = require('@fastify/autoload');
 
-module.exports = async function(fastify, opts) {
+module.exports = async function (fastify, opts) {
   // Place here your custom code!
   // fastify.register(require('./routes/v1/weather'), { prefix: '/v1' });
   // Do not touch the following lines
@@ -20,6 +20,6 @@ module.exports = async function(fastify, opts) {
   // define your routes in one of these
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'routes'),
-    options: Object.assign({}, opts)
+    options: Object.assign({}, opts),
   });
 };

@@ -16,7 +16,7 @@ const dailySchema = {
   weather: { type: 'array' },
   clouds: { type: 'number' },
   pop: { type: 'number' },
-  uvi: { type: 'number' }
+  uvi: { type: 'number' },
 };
 
 const forecastSchema = {
@@ -27,10 +27,10 @@ const forecastSchema = {
         city: { type: 'string' },
         timezone: { type: 'string' },
         current: dailySchema,
-        daily: dailySchema
-      }
-    }
-  }
+        daily: dailySchema,
+      },
+    },
+  },
 };
 
 const currentSchema = {
@@ -42,7 +42,7 @@ const currentSchema = {
         timezone: { type: 'string' },
         coord: {
           lon: { type: 'object' },
-          lat: { type: 'object' }
+          lat: { type: 'object' },
         },
         weather: { type: 'array' },
         base: { type: 'string' },
@@ -52,15 +52,15 @@ const currentSchema = {
           temp_min: { type: 'number' },
           temp_max: { type: 'number' },
           pressure: { type: 'number' },
-          humidity: { type: 'number' }
+          humidity: { type: 'number' },
         },
         visibility: { type: 'number' },
         wind: {
           speed: { type: 'number' },
-          deg: { type: 'number' }
+          deg: { type: 'number' },
         },
         clouds: {
-          zll: { type: 'string' }
+          zll: { type: 'string' },
         },
         dt: { type: 'number' },
         sys: {
@@ -68,14 +68,14 @@ const currentSchema = {
           message: { type: 'number' },
           country: { type: 'string' },
           sunrise: { type: 'number' },
-          sunset: { type: 'number' }
+          sunset: { type: 'number' },
         },
         id: { type: 'number' },
         name: { type: 'string' },
-        cod: { type: 'number' }
-      }
-    }
-  }
+        cod: { type: 'number' },
+      },
+    },
+  },
 };
 
 module.exports = { forecastSchema, currentSchema };
